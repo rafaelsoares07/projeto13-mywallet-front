@@ -90,7 +90,10 @@ export default function TelaInicial(){
             
             <AreaInfos>
 
-                {exibirTransacoes()}
+                <AreaTransacoes>
+                    {exibirTransacoes()}
+                </AreaTransacoes>
+                
 
                 <Saldo>
                 <span>Saldo</span>
@@ -203,3 +206,8 @@ const TotalSaldo=styled.span`
 color: ${props=>props.balance>0?'#03AC00':'#C70000'};
 
 `
+
+const AreaTransacoes = styled.div`
+    height: 90%;
+    overflow-y: scroll;
+`   
