@@ -39,11 +39,15 @@ export default function TelaCadastro(){
             
             console.log(response.data)
             setBalance(response.data.balance)
+            navigate('/inicial')
         })
 
-        promisse.catch(error=>console.log(error))
+        promisse.catch(error=> 
+            alert(`Preencha os campos corretamente\n
+                    Ex: 145.67\n
+                    Compra do mês`))
 
-        navigate('/inicial')
+        
     }
 
     return(
