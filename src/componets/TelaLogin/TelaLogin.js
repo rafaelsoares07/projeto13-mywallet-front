@@ -108,7 +108,10 @@ const Container = styled.div`
     }
 
     p{
+        margin-top: 5px;
         color: #FFFFFF;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 600;
        
     }
     a{

@@ -71,7 +71,7 @@ export default function TelaInicial(){
         }
         else{
             return(
-                <h1>Voce nao tem transacoes ainda</h1>
+                <span>Sem Movimentações...</span>
             )
         }
     }
@@ -84,7 +84,7 @@ export default function TelaInicial(){
         <Container>
 
             <Header>
-                <p>Olá {name}</p>
+                <p>Olá, {name}</p>
                 <img onClick={()=>navigate('/')}  src={home} />
             </Header>
             
