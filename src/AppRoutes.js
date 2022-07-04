@@ -15,10 +15,11 @@ export default function AppRoutes(){
 
     const [token, setToken] = React.useState("");
     const [name, setName] = React.useState("")
+    const [balance, setBalance] = React.useState("")
 
     return(
     
-    <TokenContext.Provider value={{token, setToken, name, setName}}>
+    <TokenContext.Provider value={{token, setToken, name, setName, balance, setBalance}}>
          <BrowserRouter>
             <Routes>
 

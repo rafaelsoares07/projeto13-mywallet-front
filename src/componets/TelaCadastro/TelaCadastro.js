@@ -67,6 +67,11 @@ const Container = styled.div`
     width: 375px;
     height: 100vh;
     font-family: 'Saira Stencil One', cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 
     form{
         display: flex;
@@ -87,12 +92,22 @@ const Container = styled.div`
     }
 
     button{
+        font-size: 20px;
+        color: #fff;
         border: none;
         width:325px;
         height: 45px;
         background-color: #A328D6;
         border-radius: 5px;
         text-align: center;
+    }
+
+    p{
+        color: #FFFFFF;
+       
+    }
+    a{
+        text-decoration: none;
     }
 
 `

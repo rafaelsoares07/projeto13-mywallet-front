@@ -10,7 +10,7 @@ import styled from "styled-components"
 
 export default function TelaLogin(){
 
-    const {setToken, setName} = useContext(TokenContext)
+    const {setToken, setName, setBalance} = useContext(TokenContext)
 
     const navigate = useNavigate()
     
@@ -37,23 +37,29 @@ export default function TelaLogin(){
         
         setToken(response.data.sectionExists.token)
         setName(response.data.userExists.name)
+        setBalance(response.data.userExists.balance)
         navigate('/inicial')
     }
 
     function LoginUserFail(){
-        console.log('deu errado')
+        alert("Email ou senha não foram encontrados!")
     }
 
     return(
         <Container>
+
+            
             <Logo>MyWallet</Logo>
 
-            <form onSubmit={LoginUser}>
-                <input type="email" value={email} onChange={(e)=> setEmail(e.target.value)} placeholder="Digite seu email"></input>
-                <input type="password" value={password} onChange={(e)=> setPassword(e.target.value)} placeholder="Digite sua senha"></input>
-                <button onClick={LoginUser}>Entrar</button>
-                <Link to="/cadastro"><p>Ainda não tem uma conta? </p></Link>
-            </form>
+                <form onSubmit={LoginUser}>
+                    <input type="email" value={email} onChange={(e)=> setEmail(e.target.value)} placeholder="Digite seu email"></input>
+                    <input type="password" value={password} onChange={(e)=> setPassword(e.target.value)} placeholder="Digite sua senha"></input>
+                    <button onClick={LoginUser}>Entrar</button>
+                    <Link to="/cadastro"><p>Ainda não tem uma conta? </p></Link>
+                </form>
+
+        
+            
             
             
         </Container>
@@ -69,6 +75,10 @@ const Container = styled.div`
     width: 375px;
     height: 100vh;
     font-family: 'Saira Stencil One', cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     form{
         display: flex;
@@ -95,6 +105,14 @@ const Container = styled.div`
         background-color: #A328D6;
         border-radius: 5px;
         text-align: center;
+    }
+
+    p{
+        color: #FFFFFF;
+       
+    }
+    a{
+        text-decoration: none;
     }
 
 `
