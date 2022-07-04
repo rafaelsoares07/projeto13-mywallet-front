@@ -18,8 +18,6 @@ export default function TelaCadastro(){
     console.log(token)
 
     
-
-
     function RegistrarSaida(event){
         event.preventDefault();
 
@@ -28,13 +26,11 @@ export default function TelaCadastro(){
                 Authorization: `Bearer ${token}`
             }
         }
-
         const body ={
             valor:valor,
             descricao:descricao,
             type:"saida"
         }
-        
         const promisse  =  axios.post("https://mywalle.herokuapp.com/novaSaida" , body, config)
 
         promisse.then(response=>{
