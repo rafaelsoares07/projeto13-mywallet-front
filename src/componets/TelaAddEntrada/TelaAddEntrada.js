@@ -33,7 +33,7 @@ export default function TelaCadastro(){
             type:"entrada"
         }
         
-        const promisse  =  axios.post("http://localhost:5000/novaEntrada" , body, config)
+        const promisse  =  axios.post("https://mywalle.herokuapp.com/novaEntrada" , body, config)
 
         promisse.then(response=>{
             

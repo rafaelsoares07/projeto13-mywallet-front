@@ -23,7 +23,7 @@ export default function TelaCadastro(){
     function LoginUser(event){
         event.preventDefault();
         console.log(user)
-        const promisse = axios.post("http://localhost:5000/cadastrar", user)
+        const promisse = axios.post("https://mywalle.herokuapp.com/cadastrar", user)
         promisse.then(createUserSucess)
         promisse.catch(createUserFail)
     }

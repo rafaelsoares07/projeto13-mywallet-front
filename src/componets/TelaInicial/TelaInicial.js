@@ -37,7 +37,7 @@ export default function TelaInicial(){
             }
         }
 
-        const promisse = axios.get("http://localhost:5000/fluxoCaixa",config)
+        const promisse = axios.get("https://mywalle.herokuapp.com/fluxoCaixa",config)
 
         promisse.then(response=>{
             console.log(response.data)

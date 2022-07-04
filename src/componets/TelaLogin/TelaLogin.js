@@ -26,7 +26,7 @@ export default function TelaLogin(){
     function LoginUser(event){
         event.preventDefault();
         console.log(user)
-        const promisse = axios.post("http://localhost:5000/login", user)
+        const promisse = axios.post("https://mywalle.herokuapp.com/login", user)
         promisse.then(LoginUserSucess)
         promisse.catch(LoginUserFail)
     }
